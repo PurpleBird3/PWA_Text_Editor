@@ -2,7 +2,7 @@
 // MY COMMENTS IN ALL CAPS
 
 
-// **** NOT SURE ABOUT THE FIRST COSNT BELOW???
+// **** NOT SURE ABOUT THE FIRST COSNT BELOW??? TRY REMOVING THE offlineFallback FROM THE CODE BELOW AND SEE IF IT STILL WORKS
 const { offlineFallback, warmStrategyCache } = require('workbox-recipes');
 const { CacheFirst } = require('workbox-strategies');
 const { registerRoute } = require('workbox-routing');
@@ -24,7 +24,7 @@ const pageCache = new CacheFirst({
   ],
 });
 
-// ??? THIS IS THE FIRST CONST FROM ABOVE THAT I'M NOT SURE ABOUT (WE WEREN"T ASKED TO DO ANYTHING WITH IT??)
+// warmStrategyCache HELPER FUNCTION WILL FETCH A URL AND CACHE.
 warmStrategyCache({
   urls: ['/index.html', '/'],
   strategy: pageCache,
@@ -44,12 +44,14 @@ registerRoute(
     // NAME OF THE CACHE NAME
     cacheName: 'asset-cache',
     plugins: [
-      // THIS WILL CACHE RESPONSES WITH THESE HEADERS TO A MAX AGE OF 30 DAYS 
+      // THIS WILL CACHE RESPONSES FOR A MAX AGE OF 30 DAYS 
       new CacheableResponsePlugin({
         statuses: [0, 200],
       }),
       // THIS PLUGIN WILL DELETE ANYTHING IN THE CACHE THAT IS OLDER THAN 30 DAYS 
       new ExpirationPlugin({
+        // **** IS THERE A maxEntries NEEDED HERE????
+
         // DEFINE THE MAX AGE OF THE CACHE (30 DAYS = 30 (DAYS) * 24 (HOURS), 60 (MINUTES), 60 (SECONDS)).
         maxAgeSeconds: 30 * 24 * 60 * 60,
       }),

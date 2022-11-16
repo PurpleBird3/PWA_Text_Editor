@@ -8,12 +8,14 @@ const butInstall = document.getElementById('buttonInstall');
 
 // I COMMENTED OUT STARTER CODE ABOVE, PASTED IT ON LINE 10 AND STARTED THERE
 window.addEventListener('beforeinstallprompt', (event) => {
-    console.log('beforeinstallprompt started.');
+    // CONSOLE LOG THE EVENT
+    console.log('beforeinstallprompt started!!!' + event);
     // STORE THE EVENT SO IT CAN BE TRIGGERED LATER
     window.deferredPrompt = event;
     // REMOVE THE HIDDEN CLASS FROM THE INSTALL BUTTON
     butInstall.classList.toggle('hidden', false);
-    console.log('beforeinstallprompt ended.');
+    // // PROMPT THE USER HERE????
+    // console.log('beforeinstallprompt ended.');
 });
 
 // TODO: Implement a click event handler on the `butInstall` element

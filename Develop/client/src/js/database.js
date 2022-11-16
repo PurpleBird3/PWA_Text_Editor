@@ -21,10 +21,17 @@ const initdb = async () =>
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
   console.log('PUT to the database');
+  // CONNECT TO THE DATABASE
   const jateDd = await openDB('jate', 1);
+  // SPECIFY THE DATABASE AND THE OBJECT STORE
   const tx = jateDd.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
-  const request = store.put({ content });
+  // PASS THE CONTENT TO STORE
+  // const request = store.put({ content });
+  // ** OR DO I NEED ID AS WELL??
+  const request = store.put({ id: 1, content });
+
+  // CONFIRM THE REQUEST AND PROMPT THE USER
   const result = await request;
   console.log('Data saved to the database', result);
   // console.error('putDb not implemented');
@@ -38,13 +45,22 @@ export const putDb = async (content) => {
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const getDb = async () => {
-  console.log('GET some content from the database');
+  console.log('GET content from the database');
+  // CONNECT TO THE DATABASE
   const jateDd = await openDB('jate', 1);
+  // SPECIFY THE DATABASE AND THE OBJECT STORE
   const tx = jateDd.transaction('jate', 'readonly');
   const store = tx.objectStore('jate');
+  // GET ALL THE CONTENT FROM THE DB
   const request = store.getAll();
+
+  // CONFIRM THE REQUEST AND CONSOLE LOG THE RESULT
   const result = await request;
   console.log('result.value', result);
+  // RETURN THE RESULT
+  // return result;
+  // *** OR 
+  return result?.value;
 };
 // console.error('getDb not implemented');
 

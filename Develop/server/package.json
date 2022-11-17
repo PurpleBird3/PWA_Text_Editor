@@ -1,13 +1,13 @@
 {
-    "name": "JATE",
+    "name": "jate",
     "version": "1.0.0",
-    "description": "",
+    "description": "PWA Text Editor",
     "main": "server.js",
     "scripts": {
         "server": "nodemon server.js --ignore client"
     },
     "keywords": [],
-    "author": "",
+    "author": "Drum Holliday",
     "license": "ISC",
     "dependencies": {
         "express": "^4.17.1"

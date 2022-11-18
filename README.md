@@ -26,7 +26,7 @@ IndexedDB
 Express.Js 
 
 
-## User Story
+## Main Purpose of the Project
 
 ```md
 AS A developer

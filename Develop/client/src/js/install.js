@@ -11,15 +11,10 @@ window.addEventListener('beforeinstallprompt', (event) => {
     // CONSOLE LOG THE EVENT
     console.log('beforeinstallprompt started!!!' + event);
 
-    // *** PREVENTDEFAULT???
-    // event.preventDefault();
-
     // STORE THE EVENT SO IT CAN BE TRIGGERED LATER
     window.deferredPrompt = event;
     // REMOVE THE HIDDEN CLASS FROM THE INSTALL BUTTON
     butInstall.classList.toggle('hidden', false);
-    // **** PROMPT THE USER WHEN IT HAS ENED????
-    // console.log('beforeinstallprompt ended.');
 });
 
 // TODO: Implement a click event handler on the `butInstall` element
@@ -28,9 +23,6 @@ window.addEventListener('beforeinstallprompt', (event) => {
 // I COMMENTED OUT STARTER CODE ABOVE, PASTED IT ON LINE 23 AND STARTED THERE
 butInstall.addEventListener('click', async () => {
     const promptEvent = window.deferredPrompt;
-    //  LOG SUCCESSFUL promptEvent TO THE CONSOLE
-    // console.log('Clicked!' + promptEvent);
-
     // IF NOT promptEvent THEN RETURN WITH ERROR MESSAGE
     if (!promptEvent) {
         // SHOW THE USER THE ERROR MESSAAGE IF THE PROMPT EVENT IS NOT SUCCESSFUL

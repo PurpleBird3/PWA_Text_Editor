@@ -1,7 +1,7 @@
 # 19 Progressive Web Applications (PWA): Text Editor
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
-# Description
+## Description
 
 This is a single-page application text editor that runs in the browser using the the Progressive Web App criteria. Additionally, the application will function offline so the user can retrieve their input.
 
@@ -9,7 +9,7 @@ In this application I implement methods for getting and storing data to an Index
 
 I deployed this full-stack application to Heroku. The URL link is provided at the bottom of this file along with the GitHub Repository link. 
 
-# Addtional Information
+## Addtional Information
 
 Node Package Manager was used for the installation of this application. NPM is an open-source software registry with over 800,000 packages and is intalled using Node.js. 
 
@@ -17,7 +17,7 @@ Node.js is  asynchronous event-driven JavaScript runtime designed to build scala
 
 NPM can manage dependecies which are also defined in the package.json file.
 
-# NPM Packages Used
+## NPM Packages Used
 IBD
 Webpack
 Babel
@@ -61,5 +61,5 @@ WHEN I deploy to Heroku
 THEN I should have proper build scripts for a webpack application
 ```
 
-# Links to the Github Repo and Heroku URL 
+### Links to the Github Repo and Heroku URL 
 

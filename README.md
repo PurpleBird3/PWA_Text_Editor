@@ -9,6 +9,9 @@ In this application I implement methods for getting and storing data to an Index
 
 I deployed this full-stack application to Heroku. The URL link is provided at the bottom of this file along with the GitHub Repository link. 
 
+## Image of Deployed Application
+<img width="835" alt="PWA" src="https://user-images.githubusercontent.com/107374333/213848340-b2c28d43-df52-4ed7-8393-4d8e9c8b83d5.png">
+
 ## Addtional Information
 
 Node Package Manager was used for the installation of this application. NPM is an open-source software registry with over 800,000 packages and is intalled using Node.js. 

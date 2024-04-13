@@ -74,12 +74,11 @@ THEN I should have proper build scripts for a webpack application
 ```
 
 ### Link to the Heroku URL and instrutions 
-
-Heroku URL (https://pure-garden-35755.herokuapp.com/)
-
 ```md
 If you go to the link below it will take you to the application.
 There you can click on "INSTALL" to download the application
 ```
+Heroku URL (https://pure-garden-35755.herokuapp.com/)
+
 
 

@@ -75,10 +75,9 @@ THEN I should have proper build scripts for a webpack application
 
 ### Link to the Heroku URL and instrutions 
 ```md
-If you go to the link below it will take you to the application.
-There you can click on "INSTALL" to download the application
+The link to the application was on Heroku but is no longer available. I will add a new link soon.
 ```
-Heroku URL (https://pure-garden-35755.herokuapp.com/)
+
 
 
 
